@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+@layer base {
+    html {
+        overflow-x: clip;
+    }
+
+    html, body, #root {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        letter-spacing: 0.01em;
+    }
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('/font/aristotelica/Aristotelica by Zetafonts/Aristotelica-Display-Regular-trial.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('/font/aristotelica/Aristotelica by Zetafonts/Aristotelica-Display-Bold-trial.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('/font/aristotelica/Aristotelica by Zetafonts/Aristotelica-Display-Thin-trial.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('/font/aristotelica/Aristotelica by Zetafonts/Aristotelica-Display-Light-trial.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Blackwood Castle */
+@font-face {
+    font-family: 'BlackwoodCastle';
+    src: url('/font/blackwood-castle/Blackwood Castle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BlackwoodCastleShadow';
+    src: url('/font/blackwood-castle/BlackwoodCastleShadow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Blogger Sans */
+@font-face {
+    font-family: 'BloggerSans';
+    src: url('/font/blogger-sans/Blogger Sans/OT-tt/Blogger Sans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BloggerSans';
+    src: url('/font/blogger-sans/Blogger Sans/OT-tt/Blogger Sans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BloggerSans';
+    src: url('/font/blogger-sans/Blogger Sans/OT-tt/Blogger Sans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BloggerSans';
+    src: url('/font/blogger-sans/Blogger Sans/OT-tt/Blogger Sans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Boldwinn */
+@font-face {
+    font-family: 'Boldwinn';
+    src: url('/font/boldwinn/Boldwinn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Galantic */
+@font-face {
+    font-family: 'Galantic';
+    src: url('/font/galantic/Galantic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Head Capital Bold Grunge */
+@font-face {
+    font-family: 'HeadCapitalGrunge';
+    src: url('/font/head-capital-bold-grunge/HeadCapitalBoldGrunge- .otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Old London */
+@font-face {
+    font-family: 'OldLondon';
+    src: url('/font/old-london/OldLondon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OldLondonAlternate';
+    src: url('/font/old-london/OldLondonAlternate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-alfa: "Alfa Slab One", serif;
+    --font-righteous: "Righteous", sans-serif;
+    --font-changa: "Changa", sans-serif;
+    --font-vend: "Vend Sans", sans-serif;
+    --font-aristotelica: "Aristotelica", sans-serif;
+    --font-blackwood: "BlackwoodCastle", serif;
+    --font-blackwood-shadow: "BlackwoodCastleShadow", serif;
+    --font-blogger: "BloggerSans", sans-serif;
+    --font-boldwinn: "Boldwinn", sans-serif;
+    --font-galantic: "Galantic", sans-serif;
+    --font-grunge: "HeadCapitalGrunge", sans-serif;
+    --font-oldlondon: "OldLondon", serif;
+    --font-oldlondon-alt: "OldLondonAlternate", serif;
+}
