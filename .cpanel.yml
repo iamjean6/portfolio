@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/alphonso/jeanobuya.com
+    - /bin/cp -R dist/* $DEPLOYPATH
