@@ -3,16 +3,27 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import { gsap } from 'gsap';
 import { Particles } from './Particles';
-import { Cpu, BrainCircuit, Database, Palette, Code2, TerminalSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Cpu, BrainCircuit, Database, Palette, Code2, TerminalSquare } from 'lucide-react';
+import IntroCard from '../cards/IntroCard';
+import DefaultCard from '../cards/DefaultCard';
+import SingleDoodleArrow from './SliderArrows';
+import AIEngineeringCard from '../cards/AIEngineeringCard';
+import DataScienceCard from '../cards/DataScienceCard';
+import WebDesignCard from '../cards/WebDesignCard';
+import SWECard from '../cards/SWECard';
+import DevOpsCard from '../cards/DevOpsCard';
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
-  { title: "Machine Learning", icon: <Cpu className="w-6 h-6" />, iconColor: "text-blue-500", desc: "Building predictive models and deep learning architectures." },
-  { title: "AI Engineering", icon: <BrainCircuit className="w-6 h-6" />, iconColor: "text-purple-500", desc: "Developing intelligent agents and deploying LLMs." },
-  { title: "Data Science", icon: <Database className="w-6 h-6" />, iconColor: "text-emerald-500", desc: "Extracting actionable insights from massive datasets." },
-  { title: "Web Design", icon: <Palette className="w-6 h-6" />, iconColor: "text-pink-500", desc: "Crafting beautiful, responsive, and highly interactive interfaces." },
-  { title: "Software Engineering", icon: <Code2 className="w-6 h-6" />, iconColor: "text-amber-500", desc: "Architecting scalable, robust backend and frontend systems." },
-  { title: "DevOps Engineering", icon: <TerminalSquare className="w-6 h-6" />, iconColor: "text-rose-500", desc: "Streamlining deployment pipelines and CI/CD." },
+  // index 0 → IntroCard (no bgType/bgSrc needed, handled separately)
+  { title: "Machine Learning",      icon: <Cpu className="w-6 h-6" />,           iconColor: "text-blue-500",    desc: "Building predictive models and deep learning architectures.",          bgType: 'image', bgSrc: '' },
+  { title: "AI Engineering",        icon: <BrainCircuit className="w-6 h-6" />,  iconColor: "text-purple-500",  desc: "Developing intelligent agents and deploying LLMs.",                   bgType: 'video', bgSrc: '' },
+  { title: "Data Science",          icon: <Database className="w-6 h-6" />,       iconColor: "text-emerald-500", desc: "Extracting actionable insights from massive datasets.",                bgType: 'image', bgSrc: '' },
+  { title: "Web Design",            icon: <Palette className="w-6 h-6" />,        iconColor: "text-pink-500",    desc: "Crafting beautiful, responsive, and highly interactive interfaces.",   bgType: 'image', bgSrc: '' },
+  { title: "Software Engineering",  icon: <Code2 className="w-6 h-6" />,          iconColor: "text-amber-500",   desc: "Architecting scalable, robust backend and frontend systems.",          bgType: 'video', bgSrc: '' },
+  { title: "DevOps Engineering",    icon: <TerminalSquare className="w-6 h-6" />, iconColor: "text-rose-500",    desc: "Streamlining deployment pipelines and CI/CD.",                        bgType: 'image', bgSrc: '' },
 ];
 
 const Interests = () => {
@@ -48,6 +59,8 @@ const Interests = () => {
             setCanHover(false);
             setIsHovered(false); 
           },
+          preventOverlaps: true,
+          fastScrollEnd: true,
         }
       });
 
@@ -75,6 +88,8 @@ const Interests = () => {
             setCanHover(false);
             setIsHovered(false); 
           },
+          preventOverlaps: true,
+          fastScrollEnd: true,
         }
       });
 
@@ -122,7 +137,7 @@ const Interests = () => {
           
           if (isVisible) {
             const visibleIndex = index - activeIndex; 
-            const cardWidth = 480; // Card is 340px, so 440 gives a beautiful 100px gap!
+            const cardWidth = 480; // Card is 440px, so 480 gives a gap
             const totalWidth = 2 * cardWidth; // 2 cards total
             const startX = -totalWidth / 2 + cardWidth / 2;
             const xPos = startX + (visibleIndex * cardWidth);
@@ -170,22 +185,22 @@ const Interests = () => {
         Interests & Focus
       </h2>
 
-      {/* Slider Navigation Arrows - Pushed down to top-[55%] */}
-      <div className={`absolute inset-x-0 top-[55%] -translate-y-1/2 flex justify-between px-2 md:px-12 z-20 transition-opacity duration-500 pointer-events-none ${showArrows ? 'opacity-100' : 'opacity-0'}`}>
-        <button 
-          onClick={handlePrev} 
+      {/* LEFT arrow - absolutely positioned on the left edge */}
+      <div className={`absolute left-2 md:left-8 top-[55%] -translate-y-1/2 z-20 transition-opacity duration-500 ${showArrows ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <SingleDoodleArrow
+          direction="prev"
+          onClick={handlePrev}
           disabled={activeIndex === 0}
-          className="p-2 md:p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white disabled:opacity-0 disabled:cursor-not-allowed pointer-events-auto transition-all transform hover:scale-110 active:scale-95"
-        >
-          <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
-        </button>
-        <button 
-          onClick={handleNext} 
+        />
+      </div>
+
+      {/* RIGHT arrow - absolutely positioned on the right edge */}
+      <div className={`absolute right-2 md:right-8 top-[55%] -translate-y-1/2 z-20 transition-opacity duration-500 ${showArrows ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <SingleDoodleArrow
+          direction="next"
+          onClick={handleNext}
           disabled={activeIndex >= (isMobile ? projectsData.length - 1 : projectsData.length - 2)}
-          className="p-2 md:p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white disabled:opacity-0 disabled:cursor-not-allowed pointer-events-auto transition-all transform hover:scale-110 active:scale-95"
-        >
-          <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
-        </button>
+        />
       </div>
 
       <div className="relative w-full h-full max-w-7xl mx-auto flex items-center justify-center pointer-events-none">
@@ -194,37 +209,15 @@ const Interests = () => {
             key={index}
             ref={el => cardsRef.current[index] = el}
             // Responsive width and height for mobile. Pushed down to top-[55%]
-            className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] md:w-[440px] h-[320px] md:h-[420px] bg-neutral-900 border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-6 flex flex-col justify-between shadow-2xl overflow-hidden pointer-events-auto cursor-pointer group opacity-0"
+            className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] md:w-[440px] h-[320px] md:h-[420px] pointer-events-auto group opacity-0"
           >
-            {/* Background Video Layer */}
-            <video 
-              autoPlay loop muted playsInline 
-              className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500 -z-10"
-              src="/path-to-your-video.mp4" 
-            />
-            {/* Top Bar */}
-            <div className="flex justify-between items-start">
-              <div className={`p-2 md:p-3 bg-white/5 rounded-xl md:rounded-2xl border border-white/5 backdrop-blur-md ${data.iconColor}`}>
-                {data.icon}
-              </div>
-              <div className="w-8 h-8 md:w-10 md:h-10 border border-dashed border-white/20 rounded-lg md:rounded-xl flex items-center justify-center text-[8px] md:text-[10px] text-white/40 uppercase tracking-widest font-mono">
-                Lottie
-              </div>
-            </div>
-            {/* Middle */}
-            <div className="flex flex-col gap-1 md:gap-2 mt-auto mb-2 md:mb-4">
-              <h3 className="text-lg md:text-xl font-bold text-white font-alfa leading-tight">
-                {data.title}
-              </h3>
-              <div className="h-[2px] w-6 md:w-8 bg-white/20 my-1 md:my-2 rounded-full"></div>
-              <p className="text-[10px] md:text-xs text-white/60 font-sans leading-relaxed line-clamp-3 md:line-clamp-none">
-                {data.desc}
-              </p>
-            </div>
-            {/* Bottom */}
-            <button className="w-full py-2 md:py-3 bg-white text-black font-bold rounded-lg md:rounded-xl text-xs md:text-sm hover:bg-neutral-200 transition-colors uppercase tracking-wider font-changa">
-              View Projects
-            </button>
+            {index === 0 ? <IntroCard />
+              : index === 1 ? <AIEngineeringCard />
+              : index === 2 ? <DataScienceCard />
+              : index === 3 ? <WebDesignCard /> 
+              : index === 4 ? <SWECard />
+              : index === 5 ? <DevOpsCard />
+              : <DefaultCard data={data} />}
           </div>
         ))}
       </div>
