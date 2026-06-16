@@ -92,9 +92,9 @@ const Homepage = () => {
         />
 
         {/* 2. Top Left Nav (Glassmorphism Pill) */}
-        <nav className="hidden absolute md:top-8 md:left-8 md:flex md:gap-4 md:gap-6 md:bg-white/10 md:backdrop-blur-md md:px-4 md:px-6 md:py-2 md:rounded-full md:border md:border-white/20 md:items-center md:z-10">
+        <nav className=" fixed top-8 left-8 flex gap-2 md:gap-4 md:gap-6 bg-white/10 backdrop-blur-md  px-2 md:px-6 py-2 rounded-full border border-white/20 items-center z-10">
           <a href="#" className="bg-white text-black px-4 py-1 rounded-full no-underline font-semibold text-xs md:text-sm">Home</a>
-          <a href="#" className="flex text-white no-underline items-center opacity-80 text-sm hover:opacity-100 transition-opacity">Cases</a>
+          <a href="#" className="flex text-white no-underline items-center opacity-80 text-sm hover:opacity-100 transition-opacity">About</a>
           <a href="#" className="block text-white no-underline opacity-80 text-sm hover:opacity-100 transition-opacity">Service</a>
           <a href="#" className="block text-white no-underline opacity-80 text-sm hover:opacity-100 transition-opacity">About</a>
         </nav>
@@ -106,7 +106,7 @@ const Homepage = () => {
 
         {/* 4. Center Left Main Typography */}
         <div className="absolute top-[40%] md:top-1/2 left-4 md:left-8 -translate-y-1/2 max-w-[90vw] md:max-w-[700px] z-10">
-          <p className="text-[0.7rem] md:text-[0.9rem] mb-2 md:mb-4 border-l-2 border-white/50 pl-2 md:pl-3 opacity-80 uppercase tracking-widest">Creative agency</p>
+          <p className="text-[0.7rem]  md:text-[0.9rem] mb-2 md:mb-4 border-l-2 border-white/50 pl-2 md:pl-3 opacity-80 uppercase tracking-widest">Portfolio</p>
           <div className="relative w-full">
             {/* Initial Text */}
             <h1 className="split-text-target-1 text-4xl sm:text-5xl md:text-6xl  font-bold font-vend leading-[1.05] uppercase tracking-[-0.02em]">
@@ -140,16 +140,24 @@ const Homepage = () => {
         {/* 7. Bottom Right Socials Pill */}
         <div className="animate-from-right absolute bottom-6 right-6 md:bottom-8 md:right-8 flex gap-3 md:gap-5 bg-white/5 backdrop-blur-xl border border-white/10 px-4 md:px-6 py-2 md:py-3 rounded-full items-center z-10">
           <div className="cursor-pointer hover:opacity-80 transition-opacity w-5 h-5 md:h-8 md:w-8">
-              <img src="img/ig.svg" alt="Instagram" className='object-cover w-full h-full' />
+             <a href="https://www.instagram.com/i.amjean_?igsh=Y3kwMGsxdWQ5enFz" target="_blank" rel="noopener noreferrer"><img src="img/ig.svg" alt="Instagram" className='object-cover w-full h-full' /></a> 
           </div>
           <div className="cursor-pointer hover:opacity-80 transition-opacity w-5 h-5 md:h-8 md:w-8">
+             <a href="https://www.facebook.com/profile.php?id=100014713896314" target="_blank" rel="noopener noreferrer">
               <img src='/img/facebook.svg' alt="Facebook" className='object-cover h-full w-full' />
+             </a>
           </div>
           <div className="cursor-pointer w-5 h-5 md:h-8 md:w-8 hover:opacity-80 transition-opacity">
+              <a href="https://www.linkedin.com/in/jean-powell-a842002a5?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
               <img src="/img/linkedin.svg" alt="LinkedIn" className='object-cover w-full h-full' />
+              </a>
+              
           </div>
           <div className="cursor-pointer w-5 h-5 md:h-8 md:w-8 hover:opacity-80 transition-opacity">
-              <img src="/img/gmail.svg" alt="Email" className='object-cover w-full h-full' />
+              <a href="mailto:jeanobuya8@gmail.com" target="_blank" rel="noopener noreferrer">
+               <img src="/img/gmail.svg" alt="Email" className='object-cover w-full h-full' /> 
+              </a>
+              
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { memo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
-import { Disc3 } from 'lucide-react';
+import { Disc3, FileTextIcon } from 'lucide-react';
 import { Particles } from './Particles';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -59,40 +59,49 @@ const About = () => {
         {/* Content Wrapper */}
         <div className='relative z-10 pt-6 md:pt-0'>
           
-          <h2 className='text-3xl md:text-6xl lg:text-7xl font-bold font-blackwood uppercase mb-4 md:mb-8 tracking-wide'>
+          <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold font-aristotelica uppercase mb-4 md:mb-4 tracking-wide'>
             About Me
           </h2>
 
           {/* === MOBILE SUMMARY (Visible ONLY on phones) === */}
-          <div className='block md:hidden'>
-            <p className='text-xs sm:text-sm font-blogger leading-relaxed opacity-80'>
-              I am a passionate designer specializing in intuitive interfaces and visually stunning digital experiences. Rooted in empathy, my approach ensures every project—from websites to brand identities—meets unique user needs while exploring the cutting-edge intersection of art and technology.
+          <div className='block space-y-3 md:hidden'>
+
+            <p className='text-sm sm:text-sm font-blogger leading-relaxed opacity-80'>
+             I am a passionate software developer with knowledge in data analyis, machine learning and AI development. I specialize in creating intuitive interfaces that not only look great but also provide seamless functionality. 
+             Rooted in empathy, my approach ensures every project—from websites to brand identities  AI systems—meets unique user needs while exploring the cutting-edge intersection of art,technology and innovation.
             </p>
+
+            <div className='flex gap-3  items-center pt-2 cursor-pointer hover:opacity-80 transition-opacity'>
+              <FileTextIcon  className='text-blue-600' size={92}/>
+              <p className='text-sm underline sm:text-sm font-vend leading-relaxed opacity-80'>
+                For a more detailed overview of my skills and experience, please refer to my resume.
+              </p>
+            </div>
           </div>
           
           {/* === DESKTOP LIST ITEMS (Visible ONLY on tablets/desktop) === */}
           {/* List Item 1 */}
-          <div className='hidden md:flex gap-3 mb-6 items-start'>
+          <div className='hidden md:flex gap-3 mb-1 items-start'>
             <h3 className='font-changa text-3xl md:text-6xl font-bold leading-none m-0 text-transparent [-webkit-text-stroke:1px_white]'>
               1.
             </h3>
             <p className='text-sm font-blogger md:text-base leading-relaxed opacity-80 pt-1 md:pt-2'>
-              I'm a passionate designer with a knack for crafting visually stunning and user-friendly digital experiences. With a background in graphic design and a love for technology, I specialize in creating intuitive interfaces that not only look great but also provide seamless functionality.
+              I'm a passionate software engineer  with an extensive background in AI development, data analysis and Machine learning . I specialize in creating intuitive interfaces that not only look great but also provide seamless functionality. With a strong foundation in both design and development, I am dedicated to crafting digital experiences that are both visually stunning and highly functional.
             </p>
           </div>
           
           {/* List Item 2 */}
-          <div className='hidden md:flex gap-3 mb-6 items-start'>
+          <div className='hidden md:flex gap-3 mb-1 items-start'>
             <h3 className='font-changa text-3xl md:text-6xl font-bold leading-none m-0 text-transparent [-webkit-text-stroke:1px_white]'>
               2.
             </h3>
             <p className='text-sm font-blogger md:text-base leading-relaxed opacity-80 pt-1 md:pt-2'>
-              My approach to design is rooted in empathy, ensuring that every project I work on is tailored to meet the unique needs of its users. Whether it's designing a website, an app, or a brand identity, I strive to bring creativity and innovation to every project I undertake.
+              My approach to design is rooted in empathy, ensuring that every project I work on is tailored to meet the unique needs of its users and provide seamless functionality. Whether it's designing a website, an app, or a brand identity, training machine learning models or creating AI applications ,I strive to bring creativity and innovation to every project I undertake.
             </p>
           </div>
           
           {/* List Item 3 */}
-          <div className='hidden md:flex gap-3 mb-6 items-start'>
+          <div className='hidden md:flex gap-3 mb-1 items-start'>
             <h3 className='font-changa text-3xl md:text-6xl font-bold leading-none m-0 text-transparent [-webkit-text-stroke:1px_white]'>
               3.
             </h3>
