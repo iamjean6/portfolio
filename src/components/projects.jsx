@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import { gsap } from 'gsap';
-import ProjectIntroCard from './ProjectIntroCard';
-import ProjectCard1 from './ProjectCard1';
-import ProjectCard2 from './ProjectCard2';
-import ProjectCardSkeleton from './ProjectCardSkeleton';
+import ProjectIntroCard from '../projects/ProjectIntroCard';
+import ProjectCard1 from '../projects/ProjectCard1';
+import ProjectCard2 from '../projects/ProjectCard2';
+import ProjectCardSkeleton from '../projects/ProjectCardSkeleton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +21,7 @@ const techStackData = [
   {id:'git', name: "GIT", category: "Version Control", useCases: "Source Code Management, Collaboration", desc: "The backbone of my development workflow. It allows me to manage code versions, collaborate seamlessly, and maintain a clean project history.", img: "/img/git.svg" },
   {id:'adk', name:"GOOGLE ADK", category: " AI Development", useCases: "AI development and infrastructure", desc: "Helps me build production ready AI infrastructure", img: "/img/ADK.webp" },
   {id:'vertexai', name:"VERTEX AI", category: " AI Development", useCases: "AI deployment, scaling and management", desc: "My trusted serverless cloud provider for deploying, monitoring and deploying my AI infrastructure", img: "/img/Vertex AI.svg" },
+  {id: 'jesus', name:"JESUS", category: "Faith", useCases: "Spiritual Guidance, Strength, and Hope", desc: "My unwavering source of strength, hope, and guidance in all aspects of life. (John 3:30) ", img: "/img/christ.jpg" }
 ]
 ;
 

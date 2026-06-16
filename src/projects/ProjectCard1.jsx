@@ -12,13 +12,15 @@ const ProjectCard1 = ({ zIndex }) => {
           </div>
 
           {/* HEADER & DESCRIPTION */}
-          <div className="flex flex-col gap-2 md:gap-6 flex-1 text-center md:text-left justify-center md:pt-4">
-            <h1 className="text-2xl md:text-6xl xl:text-7xl font-grunge leading-none text-[#d1d1d1] m-0 tracking-tight uppercase drop-shadow-lg">
+          <div className="flex flex-col gap-1 flex-1 text-center md:text-left justify-center md:pt-4">
+            <h1 className="text-2xl md:text-6xl xl:text-7xl font-grunge leading-none text-[#d1d1d1] m-0 tracking-tight  drop-shadow-lg">
               <a href="https://www.ldp-kenya.com/" target='_blank' rel="noopener noreferrer" className="hover:text-white transition-colors">
                 ldp-kenya.com
               </a>
             </h1>
-            
+            <p className=' text-lg md:text-2xl font-bold italic font-grunge text-[#f26422] tracking-wide uppercase'>
+              Project 1
+            </p>
             <p className="text-[16px] md:text-lg font-blogger leading-tight md:leading-relaxed text-zinc-400 max-w-4xl">
               Worked as the lead developer on the LDP-KENYA website, a political party's online platform. Used modern web technologies to create a responsive, user-friendly site that effectively communicated the party's message and engaged supporters. 
               Implemented features such as event calendars, news updates, and volunteer sign-up forms to enhance user interaction and support the party's outreach efforts.

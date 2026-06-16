@@ -82,7 +82,7 @@ const Homepage = () => {
 
   return (
     // Added explicit style height to strictly enforce 300vh and prevent layout collapsing
-    <div className="tall-scroll-container relative w-full font-sans" style={{ height: '300vh' }}>
+    <div id="home" className="tall-scroll-container relative w-full font-sans" style={{ height: '300vh' }}>
       <div ref={container} className="sticky top-0 h-screen w-full" style={{overflow: 'clip'}}>
         {/* 1. Hero Image */}
         <img 
@@ -92,11 +92,11 @@ const Homepage = () => {
         />
 
         {/* 2. Top Left Nav (Glassmorphism Pill) */}
-        <nav className=" fixed top-8 left-8 flex gap-2 md:gap-4 md:gap-6 bg-white/10 backdrop-blur-md  px-2 md:px-6 py-2 rounded-full border border-white/20 items-center z-10">
-          <a href="#" className="bg-white text-black px-4 py-1 rounded-full no-underline font-semibold text-xs md:text-sm">Home</a>
-          <a href="#" className="flex text-white no-underline items-center opacity-80 text-sm hover:opacity-100 transition-opacity">About</a>
-          <a href="#" className="block text-white no-underline opacity-80 text-sm hover:opacity-100 transition-opacity">Service</a>
-          <a href="#" className="block text-white no-underline opacity-80 text-sm hover:opacity-100 transition-opacity">About</a>
+        <nav className=" absolute top-8 left-8 flex gap-2 md:gap-4 md:gap-6 bg-white/10 backdrop-blur-md  px-2 md:px-6 py-2 rounded-full border border-white/20 items-center z-10">
+          <a href="#home" className="bg-white text-black px-4 py-1 rounded-full no-underline font-semibold text-xs md:text-sm">Home</a>
+          <a href="#about" className="flex text-white no-underline items-center opacity-80 text-sm hover:opacity-100 transition-opacity">About</a>
+          <a href="#interests" className="block text-white no-underline opacity-80 text-sm hover:opacity-100 transition-opacity">Interests</a>
+          <a href="#projects" className="block text-white no-underline opacity-80 text-sm hover:opacity-100 transition-opacity">Projects</a>
         </nav>
 
         {/* 3. Top Right Hamburger Menu */}
@@ -127,7 +127,7 @@ const Homepage = () => {
         </div>
 
         {/* 6. Bottom Left Glass Cards */}
-        <div className="animate-from-left absolute bottom-6 sm:bottom-4 left-8 md:left-8 flex flex-col sm:flex-row gap-1 z-10">
+        <div className="animate-from-left absolute bottom-6 sm:bottom-8 left-8 md:left-8 flex flex-col sm:flex-row gap-1 z-10">
           
           <div className=" border border-white/10 rounded-full  p-4 md:p-6 w-24 h-24 md:h-28 md:w-28 flex flex-row sm:flex-col justify-between items-center sm:items-start">
             <img src="/img/pfp.jpg" alt="" srcset="" className='w-full h-full rounded-full' />
@@ -138,7 +138,7 @@ const Homepage = () => {
         </div>
 
         {/* 7. Bottom Right Socials Pill */}
-        <div className="animate-from-right absolute bottom-6 right-6 md:bottom-8 md:right-8 flex gap-3 md:gap-5 bg-white/5 backdrop-blur-xl border border-white/10 px-4 md:px-6 py-2 md:py-3 rounded-full items-center z-10">
+        <div className="animate-from-right absolute bottom-20 right-6 md:bottom-8 md:right-8 flex gap-3 md:gap-5 bg-white/5 backdrop-blur-xl border border-white/10 px-4 md:px-6 py-2 md:py-3 rounded-full items-center z-10">
           <div className="cursor-pointer hover:opacity-80 transition-opacity w-5 h-5 md:h-8 md:w-8">
              <a href="https://www.instagram.com/i.amjean_?igsh=Y3kwMGsxdWQ5enFz" target="_blank" rel="noopener noreferrer"><img src="img/ig.svg" alt="Instagram" className='object-cover w-full h-full' /></a> 
           </div>

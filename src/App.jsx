@@ -4,6 +4,7 @@ import About from './components/about'
 import Homepage from './components/homepage'
 import Interests from './components/interests'
 import Projects from './components/projects'
+import ChatWidget from './components/ChatWidget'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <About />
     <Interests />
     <Projects />
+    <ChatWidget />
     </>
   )
 }
