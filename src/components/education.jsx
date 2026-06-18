@@ -6,15 +6,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const educationData = [
-  { id: 1, type: 'Degree', title: 'B.Sc. Computer Science', date: '2018 - 2022', desc: 'Core modules in Data Structures, Algorithms, Software Engineering, and AI.', img: '/img/placeholder1.jpg' },
-  { id: 2, type: 'Certificate', title: 'Google Cloud Data Engineer', date: '2023', desc: 'Professional certification demonstrating proficiency in designing and building data processing systems.', img: '/img/placeholder2.jpg' },
-  { id: 3, type: 'Certificate', title: 'AWS Solutions Architect', date: '2023', desc: 'Associate level certification covering core AWS services and best practices.', img: '/img/placeholder3.jpg' },
-  { id: 4, type: 'Specialization', title: 'DeepLearning.AI TensorFlow', date: '2022', desc: 'Advanced neural network architectures and deep learning applications.', img: '/img/placeholder4.jpg' },
-  { id: 5, type: 'Bootcamp', title: 'React Native & Redux', date: '2021', desc: 'Intensive mobile development bootcamp focusing on cross-platform apps.', img: '/img/placeholder5.jpg' },
-  { id: 6, type: 'Course', title: 'Advanced CSS and Sass', date: '2020', desc: 'Mastery of modern CSS layouts, animations, and preprocessors.', img: '/img/placeholder6.jpg' },
-  { id: 7, type: 'Course', title: 'Machine Learning A-Z', date: '2020', desc: 'Comprehensive guide to ML algorithms in Python and R.', img: '/img/placeholder7.jpg' },
-  { id: 8, type: 'Course', title: 'Node.js Developer', date: '2019', desc: 'Backend development, REST APIs, and database integration.', img: '/img/placeholder8.jpg' },
-  { id: 9, type: 'Diploma', title: 'High School Diploma', date: '2014 - 2018', desc: 'Focus on Mathematics and Physical Sciences.', img: '/img/placeholder9.jpg' }
+  { id: 1, type: 'Degree', title: 'B.Sc. Statistics and Comp Science', date: '2023 - Present', desc: 'Bachelors degree for the foundational knowledge of my data and computer science path. Currently enrolled at the Technical University of Mombasa.', img: '/img/placeholder1.jpg',link:''},
+  { id: 2, type: 'Certificate', title: 'Data Science: Foundations using R', date: '2025', desc: 'Professional certification demonstrating proficiency in using R language to analyse data and train machine learning models.', img: '/img/placeholder2.jpg',link:" https://www.coursera.org/account/accomplishments/specialization/SXIKTAN6QA0C?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n"  },
+  { id: 3, type: 'Certificate', title: 'Google Data Analytics', date: '2025', desc: 'Intermediate level certification covering core data analysis techniques and best practices.', img: '/img/placeholder3.jpg', link:"https://www.coursera.org/account/accomplishments/specialization/Q7J848P8KIV6?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" },
+  { id: 4, type: 'Certificate', title: 'Google Advanced Data Analytics', date: '2025', desc: 'Advanced data science techniques for training Machine Learning Models in python', img: '/img/placeholder4.jpg', link:"https://www.coursera.org/account/accomplishments/specialization/XHR3CPIXA1OY?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" },
+  { id: 5, type: 'Certificate', title: 'Python for Everybody', date: '2025', desc: 'Beginner level certification teaching python fundamentals.', img: '/img/placeholder5.jpg' , link:"https://www.coursera.org/account/accomplishments/specialization/9AUY1P8VAFK1?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n"},
+  { id: 6, type: 'Bootcamp', title: 'Build with AI with Unstacked labs', date: '2025', desc: 'AI development fundamentals using Google ADK, Genkit and Vertex AI for building production ready AI applications', img: '/img/placeholder6.jpg',link:"" },
 ];
 
 const Education = () => {
@@ -98,8 +95,9 @@ const Education = () => {
               
               {/* Card Content */}
               <div className="flex-1 flex flex-col overflow-hidden">
-                <h3 className="text-xl md:text-2xl font-bold leading-tight mb-2 uppercase shrink-0">{item.title}</h3>
-                <p className="text-sm md:text-base text-[#111]/70 leading-relaxed font-serif overflow-y-auto">{item.desc}</p>
+                <h3 className="text-xl md:text-2xl font-vend font-bold leading-tight mb-2 uppercase shrink-0">{item.title}</h3>
+                <p className="text-sm md:text-base text-[#111]/70 leading-relaxed font-changa overflow-y-auto mb-6">{item.desc}</p>
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className=' underline text-blue-500 text-lg md:text-sm font-bold leading-relaxed font-galantic'>Click to view Certificate</a>
               </div>
             </div>
           ))}
