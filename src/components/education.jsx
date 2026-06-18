@@ -7,11 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const educationData = [
   { id: 1, type: 'Degree', title: 'B.Sc. Statistics and Comp Science', date: '2023 - Present', desc: 'Bachelors degree for the foundational knowledge of my data and computer science path. Currently enrolled at the Technical University of Mombasa.', img: '/img/placeholder1.jpg',link:''},
-  { id: 2, type: 'Certificate', title: 'Data Science: Foundations using R', date: '2025', desc: 'Professional certification demonstrating proficiency in using R language to analyse data and train machine learning models.', img: '/img/placeholder2.jpg',link:" https://www.coursera.org/account/accomplishments/specialization/SXIKTAN6QA0C?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n"  },
-  { id: 3, type: 'Certificate', title: 'Google Data Analytics', date: '2025', desc: 'Intermediate level certification covering core data analysis techniques and best practices.', img: '/img/placeholder3.jpg', link:"https://www.coursera.org/account/accomplishments/specialization/Q7J848P8KIV6?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" },
-  { id: 4, type: 'Certificate', title: 'Google Advanced Data Analytics', date: '2025', desc: 'Advanced data science techniques for training Machine Learning Models in python', img: '/img/placeholder4.jpg', link:"https://www.coursera.org/account/accomplishments/specialization/XHR3CPIXA1OY?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" },
-  { id: 5, type: 'Certificate', title: 'Python for Everybody', date: '2025', desc: 'Beginner level certification teaching python fundamentals.', img: '/img/placeholder5.jpg' , link:"https://www.coursera.org/account/accomplishments/specialization/9AUY1P8VAFK1?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n"},
-  { id: 6, type: 'Bootcamp', title: 'Build with AI with Unstacked labs', date: '2025', desc: 'AI development fundamentals using Google ADK, Genkit and Vertex AI for building production ready AI applications', img: '/img/placeholder6.jpg',link:"" },
+  { id: 2, type: 'Certificate', title: 'Data Science: Foundations using R', date: '2025', desc: 'Professional certification demonstrating proficiency in using R language to analyse data and train machine learning models.', img: '/img/johns-hopkins-university.svg',link:" https://www.coursera.org/account/accomplishments/specialization/SXIKTAN6QA0C?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n"  },
+  { id: 3, type: 'Certificate', title: 'Google Data Analytics', date: '2025', desc: 'Intermediate level certification covering core data analysis techniques and best practices.', img: '/img/google.svg', link:"https://www.coursera.org/account/accomplishments/specialization/Q7J848P8KIV6?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" },
+  { id: 4, type: 'Certificate', title: 'Google Advanced Data Analytics', date: '2025', desc: 'Advanced data science techniques for training Machine Learning Models in python', img: '/img/google.svg', link:"https://www.coursera.org/account/accomplishments/specialization/XHR3CPIXA1OY?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" },
+  { id: 5, type: 'Certificate', title: 'Python for Everybody', date: '2025', desc: 'Beginner level certification teaching python fundamentals.', img: '/img/university-of-michigan-3.svg' , link:"https://www.coursera.org/account/accomplishments/specialization/9AUY1P8VAFK1?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n"},
+  { id: 6, type: 'Bootcamp', title: 'Build with AI with Unstacked labs', date: '2025', desc: 'AI development fundamentals using Google ADK, Genkit and Vertex AI for building production ready AI applications', img: '/img/bwai.jpg',link:"" },
 ];
 
 const Education = () => {
@@ -88,9 +88,9 @@ const Education = () => {
               </div>
               
               {/* Card Image Placeholder */}
-              <div className="w-full h-40 md:h-48 bg-zinc-200 mb-4 border border-[#111]/10 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 shrink-0">
+              <div className="w-full h-40 md:h-48 bg-zinc-200 mb-4 border border-[#111]/10 overflow-hidden relative  hover:grayscale-0 transition-all duration-500 shrink-0">
                   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#111] to-transparent mix-blend-overlay"></div>
-                  <div className="w-full h-full flex items-center justify-center font-black text-[#111]/10 text-6xl select-none">{item.id}</div>
+                  <img src={item.img} alt="" srcset="" className='w-full h-full object-cover' />
               </div>
               
               {/* Card Content */}
