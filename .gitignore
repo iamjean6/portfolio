@@ -21,3 +21,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI / Python Server
+AI/**/.venv
+AI/**/__pycache__
+AI/**/.env
+AI/**/*.sqlite3
+AI/**/.adk
