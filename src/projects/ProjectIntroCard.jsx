@@ -2,7 +2,10 @@ import React from 'react';
 
 const ProjectIntroCard = ({ zIndex }) => {
   return (
-    <div className={`project-placeholder-card absolute inset-0 w-full h-full z-[${zIndex}] flex flex-col items-center justify-center border-t border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]`}>
+    <div 
+      className="project-placeholder-card absolute inset-0 w-full h-full flex flex-col items-center justify-center border-t border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]"
+      style={{ zIndex }}
+    >
       <img 
         src="/img/bg (3).jpg" 
         alt="Hero Portrait" 

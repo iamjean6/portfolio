@@ -2,7 +2,10 @@ import React from 'react';
 
 const ProjectCard1 = ({ zIndex }) => {
   return (
-    <div className={`project-placeholder-card absolute inset-0 w-full h-full bg-[#1a1a1a] z-[${zIndex}] flex flex-col items-center justify-center border-t border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] p-2 md:p-8 overflow-hidden gap-2 md:gap-8`}>
+    <div 
+      className="project-placeholder-card absolute inset-0 w-full h-full bg-[#1a1a1a] flex flex-col items-center justify-center border-t border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] p-2 md:p-8 overflow-hidden gap-2 md:gap-8"
+      style={{ zIndex }}
+    >
       <div className="w-full max-w-6xl h-full flex flex-col justify-center">
         {/* TOP SECTION: Flex Layout */}
         <div className="flex flex-col md:flex-row w-full gap-2 md:gap-8 shrink-0 items-center md:items-start stagger-item opacity-0">

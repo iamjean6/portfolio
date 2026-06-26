@@ -6,6 +6,8 @@ import { gsap } from 'gsap';
 import ProjectIntroCard from '../projects/ProjectIntroCard';
 import ProjectCard1 from '../projects/ProjectCard1';
 import ProjectCard2 from '../projects/ProjectCard2';
+import ProjectCard3 from '../projects/ProjectCard3';
+import ProjectCard4 from '../projects/ProjectCard4';
 import ProjectCardSkeleton from '../projects/ProjectCardSkeleton';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -274,8 +276,8 @@ const Projects = () => {
         <ProjectIntroCard zIndex={10} />
         <ProjectCard1 zIndex={20} />
         <ProjectCard2 zIndex={30} />
-        <ProjectCardSkeleton zIndex={40} title="PROJECT 03" subtitle="(This slides over Project 02)" bgColor="bg-zinc-700" />
-        <ProjectCardSkeleton zIndex={50} title="PROJECT 04" subtitle="(This slides over Project 03)" bgColor="bg-zinc-800" />
+        <ProjectCard3 zIndex={40} />
+        <ProjectCard4 zIndex={50} />
         <ProjectCardSkeleton zIndex={60} title="PROJECT 05" subtitle="(This slides over Project 04)" bgColor="bg-zinc-900" />
       </div>
 
