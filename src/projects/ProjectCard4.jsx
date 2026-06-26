@@ -9,10 +9,10 @@ const ProjectCard4 = ({ zIndex }) => {
       <div className="w-full max-w-7xl h-full flex flex-col p-4 md:p-8 gap-4">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start border-b border-emerald-900/50 pb-4 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start border-b border-emerald-900/50 pb-2 w-full">
           <div>
-            <h4 className="text-emerald-500 font-mono text-sm tracking-widest uppercase mb-2">Project 04 // Data Science</h4>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+            <h4 className="text-emerald-500 font-mono text-sm tracking-widest uppercase mb-1">Project 04 // Data Science</h4>
+            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
               2025 Diet Analysis
             </h2>
           </div>
@@ -39,7 +39,7 @@ const ProjectCard4 = ({ zIndex }) => {
           <div className="md:col-span-4 flex flex-col gap-4">
             
             {/* Sourcing */}
-            <div className="bg-neutral-900 rounded-2xl p-4 border border-neutral-800">
+            <div className="md:bg-neutral-900 md:rounded-2xl md:p-4 md:border hidden md:border-neutral-800">
               <h3 className="text-emerald-500 font-mono text-xs tracking-widest uppercase mb-4">Data Collection</h3>
               <p className="text-neutral-300 text-xs md:text-sm leading-relaxed mb-6 font-serif">
                 Raw dietary intake data was rigorously logged and exported daily using the MyFitnessPal ecosystem to ensure high-fidelity macro and micronutrient tracking.
