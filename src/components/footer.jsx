@@ -31,7 +31,7 @@ export default function Footer() {
 
                     {/* Socials */}
                     <div className='pt-3 space-y-8 text-center'>
-                        <h2 className='text-2xl font-bold font-changa uppercase tracking-[0.3em] text-muted-foreground'>Follow the story</h2>
+                        <h2 className='text-2xl font-bold font-changa uppercase tracking-[0.3em] text-muted-foreground'> My Socials</h2>
                         <div className='flex flex-wrap justify-center gap-10 md:gap-16'>
                             <a href="https://www.facebook.com/profile.php?id=100014713896314" target="_blank" rel="noopener noreferrer" className='group transition-transform hover:-translate-y-2'>
                                 <img src="/img/facebook.svg" alt="Facebook" className='w-16 h-16 md:w-20 md:h-20 grayscale brightness-200 group-hover:grayscale-0 group-hover:brightness-100 transition-all' />
