@@ -149,9 +149,9 @@ def main():
     corpus = create_or_get_corpus()
 
 
-    local_file_path=r'C:\Users\Admin\Downloads\okc.pdf'
-    display_name='okc.pdf'
-    description="A file about okc"
+    local_file_path=r'"D:\Project\portfolio\AI\RAG\rag\shared_libraries\Jean_Powell_Obuya_Booklet.pdf"'
+    display_name='jean_obuya.pdf'
+    description="A file about Jean Powell"
 
     # Update the .env file with the corpus name
     update_env_file(corpus.name, ENV_FILE_PATH)
