@@ -40,8 +40,13 @@ const ProjectCard4 = ({ zIndex }) => {
             
             {/* Sourcing */}
             <div className="md:bg-neutral-900 md:rounded-2xl md:p-4 md:border hidden md:border-neutral-800">
-              <h3 className="text-emerald-500 font-mono text-xs tracking-widest uppercase mb-4">Data Collection</h3>
-              <p className="text-neutral-300 text-xs md:text-sm leading-relaxed mb-6 font-serif">
+             
+            </div>
+
+            {/* Methodology */}
+            <div className="bg-neutral-900 rounded-2xl p-4 border border-neutral-800 flex-1">
+               <h3 className="text-emerald-500 font-mono text-xs tracking-widest uppercase mb-2">Data Collection</h3>
+              <p className="text-neutral-300 text-xs md:text-sm leading-relaxed mb-3 font-serif">
                 Raw dietary intake data was rigorously logged and exported daily using the MyFitnessPal ecosystem to ensure high-fidelity macro and micronutrient tracking.
               </p>
               <div className="flex gap-4 items-center p-3 bg-neutral-950 rounded-xl border border-neutral-800">
@@ -49,11 +54,7 @@ const ProjectCard4 = ({ zIndex }) => {
                 <span className="text-neutral-500 text-lg md:text-xl font-light">+</span>
                 <img src="/img/google-play-5.svg" alt="Google Play" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
               </div>
-            </div>
-
-            {/* Methodology */}
-            <div className="bg-neutral-900 rounded-2xl p-4 border border-neutral-800 flex-1">
-              <h3 className="text-emerald-500 font-mono text-xs tracking-widest uppercase mb-4">Analytical Methods</h3>
+              <h3 className="text-emerald-500 font-mono text-xs tracking-widest uppercase mb-2 mt-2">Analytical Methods</h3>
               <ul className="space-y-4">
                 <li className="flex flex-col">
                   <span className="text-white font-bold uppercase tracking-wide text-sm">Data Cleaning</span>

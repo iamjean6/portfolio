@@ -278,7 +278,7 @@ const Projects = () => {
         <ProjectCard2 zIndex={30} />
         <ProjectCard3 zIndex={40} />
         <ProjectCard4 zIndex={50} />
-        <ProjectCardSkeleton zIndex={60} title="PROJECT 05" subtitle="(This slides over Project 04)" bgColor="bg-zinc-900" />
+
       </div>
 
     </StyledSection>

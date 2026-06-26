@@ -31,15 +31,15 @@ const ProjectCard3 = ({ zIndex }) => {
           {/* Main Screenshot/Description */}
           <div className="md:col-span-2 bg-neutral-800 rounded-3xl overflow-hidden flex flex-col border border-neutral-700 relative group">
              {/* Placeholder Image */}
-             <div className="h-40 md:h-1/2 w-full bg-gradient-to-br from-blue-900/50 to-neutral-900 relative">
-               <div className="absolute inset-0 flex items-center justify-center">
-                 <span className="text-neutral-600 font-mono text-xl tracking-widest">APP_SCREENSHOT_PLACEHOLDER.JPG</span>
+             <div className="h-48 md:h-[55%] w-full bg-neutral-900 relative border-b border-neutral-800">
+               <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
+                 <img src="/img/bloglogo.png" alt="Rizzen Blog Logo" className='max-h-full max-w-full object-contain drop-shadow-2xl' />
                </div>
              </div>
              {/* Text Content */}
              <div className="p-4 md:p-6 flex-1 flex flex-col justify-center bg-neutral-800 z-10 border-t border-neutral-700">
                 <p className="text-neutral-300 text-base md:text-lg font-serif leading-relaxed">
-                  A highly scalable, full-stack blogging platform architected for performance and accessibility. Users can write, publish, and consume content natively.
+Rizzen is a digital outreach platform delivering bro's(me) thoughts in a timely, accurate, and in-depth coverage across a wide spectrum of topics. I deliver insightful thoughts on God, how he works through our lives and a few other aspects that inform, educate, and drive conversations.
                 </p>
              </div>
           </div>
