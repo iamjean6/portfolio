@@ -6,6 +6,8 @@ import Interests from './components/interests'
 import Projects from './components/projects'
 import Education from './components/education'
 import ChatWidget from './components/ChatWidget'
+import Footer from './components/footer'
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
     <Interests />
     <Education />
     <Projects />
-    
+    <Footer />
     <ChatWidget />
     </>
   )
