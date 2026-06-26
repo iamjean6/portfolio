@@ -16,13 +16,13 @@ export default function Footer() {
                     {/* Contact Details */}
                     <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <div className='bg-card p-12 rounded-[3rem] border border-border shadow-xl hover:shadow-primary/5 transition-all text-center space-y-4 group'>
-                            <p className='text-muted-foreground font-changa uppercase tracking-widest text-sm'>General Inquiries</p>
+                            <p className='text-muted-foreground font-changa uppercase tracking-widest text-sm'>General Inquiries and collaboration</p>
                             <a href="mailto:info@insightville.com" className='text-3xl md:text-5xl font-bold font-vend text-foreground hover:text-primary transition-colors block break-words'>
                                 jeanobuya8@gmail.com
                             </a>
                         </div>
                         <div className='bg-card p-12 rounded-[3rem] border border-border shadow-xl hover:shadow-primary/5 transition-all text-center space-y-4 group'>
-                            <p className='text-muted-foreground font-changa uppercase tracking-widest text-sm'>Call Us Directly</p>
+                            <p className='text-muted-foreground font-changa uppercase tracking-widest text-sm'>Call Me Directly</p>
                             <a href="tel:+254703676436" className='text-3xl md:text-5xl font-bold font-vend text-foreground hover:text-primary transition-colors block'>
                                 +254 774 431 675
                             </a>
