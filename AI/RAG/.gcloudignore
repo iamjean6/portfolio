@@ -1,0 +1,11 @@
+.gcloudignore
+.git
+.gitignore
+
+# Environments
+.venv/
+.venv2/
+__pycache__/
+
+# Secrets
+.env

@@ -19,7 +19,7 @@ import vertexai
 from vertexai import agent_engines
 from vertexai.preview.reasoning_engines import AdkApp
 
-from rag.agent import app as adk_app
+from rag.agent import root_agent
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -35,6 +35,7 @@ load_dotenv(ENV_FILE_PATH)
 GOOGLE_CLOUD_PROJECT = os.getenv("GOOGLE_CLOUD_PROJECT")
 GOOGLE_CLOUD_LOCATION = os.getenv("GOOGLE_CLOUD_LOCATION")
 STAGING_BUCKET = os.getenv("STAGING_BUCKET")
+RAG_CORPUS = os.getenv("RAG_CORPUS")
 
 vertexai.init(
     project=GOOGLE_CLOUD_PROJECT,
@@ -57,8 +58,12 @@ def update_env_file(agent_engine_id, env_file_path):
 
 logger.info("deploying app...")
 app = AdkApp(
-    agent=adk_app,
+    agent=root_agent,
     enable_tracing=True,
+    env_vars={
+        "RAG_CORPUS": RAG_CORPUS,
+        "GOOGLE_GENAI_USE_VERTEXAI": "1",
+    }
 )
 
 logging.debug("deploying agent to agent engine:")
@@ -67,7 +72,7 @@ remote_app = agent_engines.create(
     app,
     requirements=[
         "google-cloud-aiplatform[adk,agent-engines]>=1.108.0",
-        "google-adk[eval]>=1.31.0",
+        "google-adk[eval]==1.30.0",
         "python-dotenv",
         "google-auth",
         "tqdm",

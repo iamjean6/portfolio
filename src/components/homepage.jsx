@@ -84,12 +84,18 @@ const Homepage = () => {
     // Added explicit style height to strictly enforce 300vh and prevent layout collapsing
     <div id="home" className="tall-scroll-container relative w-full font-sans" style={{ height: '300vh' }}>
       <div ref={container} className="sticky top-0 h-screen w-full" style={{overflow: 'clip'}}>
-        {/* 1. Hero Image */}
-        <img 
-          src="/img/Cap.jpg" 
-          alt="Hero Portrait" 
+        
+        <picture>
+          <source media='(min-width: 768px)' srcset="/img/homepage.jpg" />
+          <img 
+          src="/img/about3.jpg" 
+          alt="Hero Potrait"
           className="absolute inset-0 w-full h-full object-cover -z-10 overflow-hidden"
-        />
+           />
+        </picture>
+
+
+       
 
         {/* 2. Top Left Nav (Glassmorphism Pill) */}
         <nav className=" absolute top-8 left-8 flex gap-2 md:gap-4 md:gap-6 bg-white/10 backdrop-blur-md  px-2 md:px-6 py-2 rounded-full border border-white/20 items-center z-10">
@@ -129,11 +135,11 @@ const Homepage = () => {
         {/* 6. Bottom Left Glass Cards */}
         <div className="animate-from-left absolute bottom-6 sm:bottom-8 left-8 md:left-8 flex flex-col sm:flex-row gap-1 z-10">
           
-          <div className=" border border-white/10 rounded-full  p-4 md:p-6 w-24 h-24 md:h-28 md:w-28 flex flex-row sm:flex-col justify-between items-center sm:items-start">
+          <div className="  rounded-full  p-4 md:p-6 w-24 h-24 md:h-28 md:w-28 flex flex-row sm:flex-col justify-between items-center sm:items-start">
             <img src="/img/pfp.jpg" alt="" srcset="" className='w-full h-full rounded-full' />
           </div>
-          <div className=" h-20 w-20 md:h-28 md:w-28 border border-white/10 rounded-full  p-4 md:p-6   flex flex-row sm:flex-col justify-between items-center sm:items-start">
-            <p className="text-lg md:text-lg  font-bold italic font-grunge">JEAN POWELL</p>
+          <div className=" h-20 w-20 md:h-28 md:w-28 rounded-full  p-4 md:p-6   flex flex-row sm:flex-col justify-between items-center sm:items-start">
+            <p className="text-lg md:text-lg text-black md:text-white font-bold italic font-grunge">JEAN POWELL</p>
           </div>
         </div>
 

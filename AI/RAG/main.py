@@ -66,11 +66,34 @@ async def chat(request: ChatRequest):
         raise HTTPException(status_code=500, detail="Agent Engine is not initialized")
     
     try:
-        # Call the Agent Engine. 
-        # Note: 'query' is the method name your ADK agent exposes.
-        response = agent_engine.query(query=request.message)
+        events_list = list(agent_engine.stream_query(message=request.message, user_id="frontend-user"))
         
-        return {"reply": response}
+        reply_text = ""
+        for event in events_list:
+            # ADK events wrap the final response text in `content` or `actions` depending on version
+            # First try extracting from the standard GenAI Content format:
+            if "content" in event and "parts" in event["content"]:
+                for part in event["content"]["parts"]:
+                    if "text" in part:
+                        reply_text += part["text"]
+            
+            # Fallback to the newer actions format
+            elif "actions" in event and event["actions"]:
+                actions = event["actions"]
+                if "agent_message" in actions:
+                    reply_text += actions["agent_message"].get("text", "")
+                elif "agent_response" in actions:
+                    reply_text += actions["agent_response"].get("text", "")
+                elif "text" in actions:
+                    reply_text += actions["text"]
+            elif "message" in event and "content" in event["message"]:
+                 pass # usually echo of user message
+                 
+        if not reply_text:
+            # Fallback if the ADK structure is different
+            reply_text = str(events_list)
+
+        return {"reply": reply_text.strip()}
     except Exception as e:
         logger.error(f"Error querying agent engine: {e}")
         raise HTTPException(status_code=500, detail=str(e))

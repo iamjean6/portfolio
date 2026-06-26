@@ -44,7 +44,7 @@ const ChatWidget = () => {
       // Add AI response to UI
       setMessages(prev => [...prev, { role: 'ai', text: data.reply }]);
     } catch (error) {
-      console.error("Error communicating with AI:", error);
+      console.log("Error communicating with AI:", error);
       setMessages(prev => [...prev, { 
         role: 'ai', 
         text: "Sorry, I'm having trouble connecting right now. Please try again later!" 

@@ -1,16 +1,23 @@
+import logging
 import os
 import warnings
 
 from arize.otel import register
 from dotenv import load_dotenv
-from openinference.instrumentation.google_adk import GoogleADKInstrumentor
 from opentelemetry import trace
 
 load_dotenv()
 
+logger = logging.getLogger(__name__)
+
 
 def instrument_adk_with_arize() -> trace.Tracer:
-    """Instrument the ADK with Arize."""
+    """Instrument the ADK with Arize.
+    
+    This is best-effort — if instrumentation fails (e.g. ADK version
+    incompatibility), it logs a warning and returns None so the agent
+    can still function without tracing.
+    """
 
     if os.getenv("ARIZE_SPACE_ID") is None:
         warnings.warn("ARIZE_SPACE_ID is not set", stacklevel=2)
@@ -19,12 +26,20 @@ def instrument_adk_with_arize() -> trace.Tracer:
         warnings.warn("ARIZE_API_KEY is not set", stacklevel=2)
         return None
 
-    tracer_provider = register(
-        space_id=os.getenv("ARIZE_SPACE_ID"),
-        api_key=os.getenv("ARIZE_API_KEY"),
-        project_name=os.getenv("ARIZE_PROJECT_NAME", "adk-rag-agent"),
-    )
+    try:
+        tracer_provider = register(
+            space_id=os.getenv("ARIZE_SPACE_ID"),
+            api_key=os.getenv("ARIZE_API_KEY"),
+            project_name=os.getenv("ARIZE_PROJECT_NAME", "adk-rag-agent"),
+        )
 
-    GoogleADKInstrumentor().instrument(tracer_provider=tracer_provider)
+        from openinference.instrumentation.google_adk import GoogleADKInstrumentor
+        GoogleADKInstrumentor().instrument(tracer_provider=tracer_provider)
 
-    return tracer_provider.get_tracer(__name__)
+        return tracer_provider.get_tracer(__name__)
+    except Exception as e:
+        logger.warning(
+            f"Arize ADK instrumentation failed (likely ADK version incompatibility): {e}. "
+            "Continuing without tracing."
+        )
+        return None

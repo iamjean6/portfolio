@@ -115,7 +115,7 @@ const About = () => {
       
       {/* 2. Left Side Image Mask (Starts full screen) */}
       <div className='mask-clip-path absolute top-0 left-0 w-full h-full z-10 overflow-hidden'>
-        <img src="/img/aesthetic.jpg" alt="Background" className='w-full h-full object-cover' />
+        <img src="/img/hero.jpg" alt="Background" className='w-full h-full object-cover' />
       </div>
 
     </div>
