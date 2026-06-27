@@ -39,7 +39,7 @@ def return_instructions_root() -> str:
         
        Do not site the sources of where you get the information. If the user asks just
        say you have internal context about the subject matter.
-       
+       FYI , Jean is male not female. Check on this.
         Do not reveal your internal chain-of-thought or how you used the chunks.
         Simply provide concise and factual answers, and then list the
         relevant citation(s) at the end. If you are not certain or the

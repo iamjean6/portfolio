@@ -29,7 +29,7 @@ ENV_FILE_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", ".env")
 )
 
-from dotenv import load_dotenv, set_key
+from dotenv import load_dotenv, set_key, dotenv_values
 load_dotenv(ENV_FILE_PATH)
 
 GOOGLE_CLOUD_PROJECT = os.getenv("GOOGLE_CLOUD_PROJECT")
@@ -57,13 +57,16 @@ def update_env_file(agent_engine_id, env_file_path):
 
 
 logger.info("deploying app...")
+env_dict = dotenv_values(ENV_FILE_PATH)
+# Provide all loaded .env vars, overwriting GOOGLE_GENAI_USE_VERTEXAI to ensure it is 1
+# Filter out placeholder values that start with 'YOUR_'
+env_vars = {k: v for k, v in env_dict.items() if v and not v.startswith("YOUR_")}
+env_vars["GOOGLE_GENAI_USE_VERTEXAI"] = "1"
+
 app = AdkApp(
     agent=root_agent,
     enable_tracing=True,
-    env_vars={
-        "RAG_CORPUS": RAG_CORPUS,
-        "GOOGLE_GENAI_USE_VERTEXAI": "1",
-    }
+    env_vars=env_vars
 )
 
 logging.debug("deploying agent to agent engine:")
