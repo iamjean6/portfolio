@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className='w-full bg-background min-h-screen transition-colors duration-300'>
+        <div id="footer" className='w-full bg-background min-h-screen transition-colors duration-300'>
             <div className='max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8'>
                 <div className='flex flex-col items-center justify-center space-y-12 animate-in fade-in zoom-in duration-1000'>
                     {/* Header */}

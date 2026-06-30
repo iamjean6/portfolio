@@ -7,11 +7,13 @@ import Projects from './components/projects'
 import Education from './components/education'
 import ChatWidget from './components/ChatWidget'
 import Footer from './components/footer'
-
+import ScrollIndicator from './components/ScrollIndicator'
+import OnboardingOverlay from './components/OnboardingOverlay'
 
 function App() {
   return (
     <>
+    <OnboardingOverlay />
     <Homepage />
     <About />
     <Interests />
@@ -19,6 +21,7 @@ function App() {
     <Projects />
     <Footer />
     <ChatWidget />
+    <ScrollIndicator />
     </>
   )
 }
