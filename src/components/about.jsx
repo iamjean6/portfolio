@@ -73,9 +73,11 @@ const About = () => {
 
             <div className='flex gap-3  items-center pt-2 cursor-pointer hover:opacity-80 transition-opacity'>
               <FileTextIcon  className='text-blue-600' size={92}/>
+              <a href="https://docs.google.com/document/d/10PzLWW2jgklKpga4UwzPMdMy9M3D5QPx/edit?usp=drive_link&ouid=100084246029249386604&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
               <p className='text-sm underline sm:text-sm font-vend leading-relaxed opacity-80'>
                 For a more detailed overview of my skills and experience, please refer to my resume.
               </p>
+              </a>
             </div>
           </div>
           
