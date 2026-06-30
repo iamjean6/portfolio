@@ -70,7 +70,7 @@ const About = () => {
              I am a passionate software developer with knowledge in data analyis, machine learning and AI development. I specialize in creating intuitive interfaces that not only look great but also provide seamless functionality. 
              Rooted in empathy, my approach ensures every project—from websites to brand identities  AI systems—meets unique user needs while exploring the cutting-edge intersection of art,technology and innovation.
             </p>
-
+            {/*
             <div className='flex gap-3  items-center pt-2 cursor-pointer hover:opacity-80 transition-opacity'>
               <FileTextIcon  className='text-blue-600' size={92}/>
               <a href="https://docs.google.com/document/d/10PzLWW2jgklKpga4UwzPMdMy9M3D5QPx/edit?usp=drive_link&ouid=100084246029249386604&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
@@ -79,7 +79,9 @@ const About = () => {
               </p>
               </a>
             </div>
+            */}
           </div>
+          
           
           {/* === DESKTOP LIST ITEMS (Visible ONLY on tablets/desktop) === */}
           {/* List Item 1 */}
